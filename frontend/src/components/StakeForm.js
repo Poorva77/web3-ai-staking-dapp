@@ -10,7 +10,7 @@ export default function StakeForm() {
     try {
 
         const res = await axios.post(
-            "http://localhost:5000/api/stake/stake",
+            "https://web3-ai-staking-dapp.onrender.com/api/stake/stake",
             { amount }
         );
 
