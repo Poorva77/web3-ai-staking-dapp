@@ -1,7 +1,13 @@
 const { ethers } = require("ethers");
 
-const contractABI = [
+/*const contractABI = [
     "function stake() public payable"
+]; */
+
+const contractABI = [
+    "function stake() public payable",
+    "function withdraw() public",
+    "function getMyStake() public view returns(uint256)"
 ];
 
 const contractAddress = "0xb2AC5092a4cF78Ec0E4492F81df4b28Cd07eEF8C";
@@ -40,4 +46,66 @@ exports.stakeAmount = async (req, res) => {
             error: error.message
         });
     }
+};
+
+exports.withdrawStake = async (req, res) => {
+
+    try {
+
+        const tx = await contract.withdraw();
+
+        await tx.wait();
+
+        res.json({
+
+            success: true,
+
+            txHash: tx.hash
+
+        });
+
+    }
+
+    catch(error){
+
+        res.status(500).json({
+
+            success: false,
+
+            error: error.message
+
+        });
+
+    }
+
+};
+
+exports.getStake = async (req, res) => {
+
+    try {
+
+        const amount = await contract.getMyStake();
+
+        res.json({
+
+            success: true,
+
+            stake: ethers.formatEther(amount)
+
+        });
+
+    }
+
+    catch(error){
+
+        res.status(500).json({
+
+            success: false,
+
+            error: error.message
+
+        });
+
+    }
+
 };
