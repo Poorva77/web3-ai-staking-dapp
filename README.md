@@ -55,7 +55,7 @@ web3-ai-staking-dapp/
 
 ## Live Demo
 
-https://your-project.vercel.app
+https://web3-ai-staking-dapp.vercel.app/
 
 ## Contract Address
 
@@ -63,4 +63,4 @@ https://your-project.vercel.app
 
 ## Backend API
 
-https://your-backend-url.com
+https://web3-ai-staking-dapp.onrender.com
