@@ -4,9 +4,9 @@ const contractABI = [
     "function stake() public payable"
 ];
 
-const contractAddress = "YOUR_SCAI_CONTRACT_ADDRESS";
+const contractAddress = "0xb2AC5092a4cF78Ec0E4492F81df4b28Cd07eEF8C";
 
-const provider = new ethers.JsonRpcProvider("YOUR_SCAI_RPC_URL");
+const provider = new ethers.JsonRpcProvider("https://mainnet-rpc.scai.network");
 
 const wallet = new ethers.Wallet(
     process.env.PRIVATE_KEY,
