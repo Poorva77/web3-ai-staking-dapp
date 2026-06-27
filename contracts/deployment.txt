@@ -1,0 +1,14 @@
+Network:
+SecureChain (SCAI)
+
+Contract:
+0xABC123....
+
+Deployment Date:
+27 June 2026
+
+Compiler:
+0.8.20
+
+Transaction Hash:
+0x98d7....
